@@ -8,12 +8,14 @@ The rules are as follows:
 st is used with numbers ending in 1 (e.g. 1st, pronounced first)
 nd is used with numbers ending in 2 (e.g. 92nd, pronounced ninety-second)
 rd is used with numbers ending in 3 (e.g. 33rd, pronounced thirty-third)
-As an exception to the above rules, all the "teen" numbers ending with 11, 12 or 13 use -th (e.g. 11th, pronounced eleventh, 112th, pronounced one hundred [and] twelfth)
+As an exception to the above rules, all the "teen" numbers ending with 11, 12 or 13 use -th 
+    (e.g. 11th, pronounced eleventh, 112th, pronounced one hundred [and] twelfth)
 th is used for all other numbers (e.g. 9th, pronounced ninth).
 ```
 (Note: A number suffix is a letter that might come after an address if there aren't enough numbers for all the buildings on a street. (For example, if your address is 9A Main Street, the suffix would be "A".))
 
 ```Javascript
+
 // Function to : 
 //   Add Ordinal Suffix to numbers
 function addOrdinalNumberSuffix(num) {
@@ -30,7 +32,19 @@ function addOrdinalNumberSuffix(num) {
     }
     return num + "th";
 }
+
+// Function to : 
+//   Remove Ordinal Suffix from numbers
+function removeOrdinalNumberSuffix(numStr) {
+    var outputStr = numStr.replace(/(\d+)(st|nd|rd|th)/g, "$1");  
+  
+    return outputStr;
+}
 ```
+
+## Refrence 
+* https://regex101.com/r/pN4oG0/1
+* http://eloquentjavascript.net/09_regexp.html
 
 <hr align="center" width="50%">
 <hr align="center" width="60%">
